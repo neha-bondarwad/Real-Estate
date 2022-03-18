@@ -7,7 +7,7 @@ Real estate firms need to be consistent in their pricing in order to attract buy
 For the given datasets build predictive model for response variable “Price”.
 Test data contains all other factors except “Price”, we need to predict that using the model that developed by us and submit predicted values in a csv files.
 
-**Solution: **
+****Solution: ****
 
 •	For the given train and test dataset data pre-processing is done.
 •	Imputing of the NA values are done with mean in the dataset.
