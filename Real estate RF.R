@@ -1,5 +1,5 @@
 getwd()
-setwd("F:\\Edvancer course\\R LECTURES\\PROJECT\\Project1")
+setwd("F:\\datasets\\R LECTURES\\PROJECT\\Project1")
 getwd()
 
 
@@ -139,14 +139,13 @@ for(i in 1:num_trials){
              seed =2
              )
   score.this=k$cv[,2]
-  
+ 
  
   if(score.this<myerror){
     
     myerror=score.this
     print(myerror)
     
-
     best_params=params
     print(best_params)
     
@@ -154,8 +153,6 @@ for(i in 1:num_trials){
   }
   
 }
-
-
 
  pr.rf.final=randomForest(Price~.,
                          mtry=15,
@@ -165,6 +162,6 @@ for(i in 1:num_trials){
                          data=pr_train)
 
 test.pred=predict(pr.rf.final,newdata = pr_test)
-write.csv(test.pred,"Neha_Bondarwad_P1_part2.csv",row.names = F)
+write.csv(test.pred,"real-estate_RF.csv",row.names = F)
 
 
